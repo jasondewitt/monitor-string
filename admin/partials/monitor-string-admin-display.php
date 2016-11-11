@@ -28,9 +28,9 @@
         settings_fields($this->plugin_name);
         do_settings_sections($this->plugin_name);
       ?>
-    <p>String to check for: <input type="text" id=<?php echo $this->plugin_name?>-string name="<?php echo $this->plugin_name?>[string]" value="<?php echo $string_to_monitor?>" class="regular-text" /><br />
-
-    <?php submit_button('Save all changes', 'primary','submit', TRUE); ?>
+    <p>String to check for: <input type="text" id=<?php echo $this->plugin_name?>-string name="<?php echo $this->plugin_name?>[string]" value="<?php echo $string_to_monitor?>" class="regular-text" /><br /><br />
+      <input class="button-secondary" type="button" onclick='jQuery("#monitor-string-string").val(randomString(32));' value="<?php esc_attr_e( 'Generate Random String' ); ?>" />
+    <?php submit_button('Save', 'primary','submit', false); ?>
 
    </form>
 
